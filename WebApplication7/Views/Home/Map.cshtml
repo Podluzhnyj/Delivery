@@ -1,0 +1,9 @@
+﻿@model IEnumerable<WebApplication7.Models.User>
+<a asp-controller="Account" asp-action="NewDelivery">Добавить пользователя</a>
+<table class="table">
+    <tr><td>Id</td><td>ФИО</td><td>pass</td><td>Номер</td><td>email</td><td>balance</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.Id</td><td>@item.Name</td><td>@item.Password</td><td>@item.Phone</td><td>@item.Email</td><td>@item.Balance</td></tr>
+    }
+</table>

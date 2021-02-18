@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebApplication7.Models.Order>
+@{
+    ViewData["Title"] = "Профиль";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Личный кабинет @Html.DisplayNameFor(model => model.User.Email)</h1>
+    <p><a asp-controller="Account" asp-action="NewDelivery">Оформить новый заказ</a></p>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Login)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactPhone)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table>

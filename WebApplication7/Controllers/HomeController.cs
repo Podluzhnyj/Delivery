@@ -1,10 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using WebApplication7.Models;
 
 namespace WebApplication7.Controllers
@@ -17,7 +14,7 @@ namespace WebApplication7.Controllers
         {
             _logger = logger;
         }
-
+        
         public IActionResult Index()
         {
             return View();
@@ -27,6 +24,20 @@ namespace WebApplication7.Controllers
         {
             return View();
         }
+        public IActionResult Delivery()
+        {
+            return View();
+        }
+        public IActionResult Map()
+        {
+            return View();
+
+        }
+        public IActionResult Pay()
+        {
+            return View();
+        }
+      
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
