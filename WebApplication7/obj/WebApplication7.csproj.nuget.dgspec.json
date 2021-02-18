@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\smash\\source\\repos\\WebApplication7\\WebApplication7\\WebApplication7.csproj": {}
+    "C:\\Users\\smash\\OneDrive\\Рабочий стол\\Delivery\\WebApplication7\\WebApplication7.csproj": {}
   },
   "projects": {
-    "C:\\Users\\smash\\source\\repos\\WebApplication7\\WebApplication7\\WebApplication7.csproj": {
+    "C:\\Users\\smash\\OneDrive\\Рабочий стол\\Delivery\\WebApplication7\\WebApplication7.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\smash\\source\\repos\\WebApplication7\\WebApplication7\\WebApplication7.csproj",
+        "projectUniqueName": "C:\\Users\\smash\\OneDrive\\Рабочий стол\\Delivery\\WebApplication7\\WebApplication7.csproj",
         "projectName": "WebApplication7",
-        "projectPath": "C:\\Users\\smash\\source\\repos\\WebApplication7\\WebApplication7\\WebApplication7.csproj",
+        "projectPath": "C:\\Users\\smash\\OneDrive\\Рабочий стол\\Delivery\\WebApplication7\\WebApplication7.csproj",
         "packagesPath": "C:\\Users\\smash\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\smash\\source\\repos\\WebApplication7\\WebApplication7\\obj\\",
+        "outputPath": "C:\\Users\\smash\\OneDrive\\Рабочий стол\\Delivery\\WebApplication7\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\smash\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
