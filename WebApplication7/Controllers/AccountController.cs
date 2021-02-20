@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -13,9 +14,13 @@ namespace WebApplication7.Controllers
 {
     public class AccountController : Controller
     {
-        private UserContext db;
-        public AccountController(UserContext context)
+        private ApplicationContext db;
+
+        private readonly ILogger<AccountController> _logger;
+
+        public AccountController(ILogger<AccountController> logger, ApplicationContext context)
         {
+            _logger = logger;
             db = context;
         }
         [HttpGet]
@@ -40,29 +45,32 @@ namespace WebApplication7.Controllers
             }
             return View(model);
         }
-        [Authorize]
-        public async Task<IActionResult> ProfileAsync()
-        {
-            return View(await db.Users.ToListAsync());
-        }
 
         [HttpGet]
         public IActionResult Register()
         {
             return View();
         }
-        [Authorize]
-        public IActionResult NewDelivery()
+
+        public async Task<IActionResult> Index()
+        {
+            return View(await db.Orders.ToListAsync());
+        }
+        public IActionResult Create()
         {
             return View();
         }
-        
+        [Authorize(Roles = "admin")]
+        public IActionResult Panel()
+        {
+            return View();
+        }
         [HttpPost]
-        public async Task<IActionResult> NewDelivery(Order order)
+        public async Task<IActionResult> Create(Order order)
         {
             db.Orders.Add(order);
             await db.SaveChangesAsync();
-            return RedirectToAction("Profile");
+            return RedirectToAction("Index");
         }
         [HttpPost]
         [ValidateAntiForgeryToken]

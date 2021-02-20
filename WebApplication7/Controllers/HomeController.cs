@@ -1,18 +1,23 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using WebApplication7.Models;
 
 namespace WebApplication7.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationContext db;
+
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ApplicationContext context)
         {
             _logger = logger;
+            db = context;
         }
         
         public IActionResult Index()

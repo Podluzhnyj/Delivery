@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JXl3dplceI2QueVh7fRq57khJ45UAV+ZKc5Z7gqvDa1kwJJKJBvfyzjHDFAeHexGyO8StZJeEWnNhIpL6G4Dtg==",
+  "dgSpecHash": "4ZQcvgNtPonCUJWEr+lPYI55DHuANEYvLIsUHcx041YuxSlWOQZp5SM6mME7nH+Sg6p2bd4SZ/4dNUbZcz2HYw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\smash\\OneDrive\\Рабочий стол\\Delivery\\WebApplication7\\WebApplication7.csproj",
+  "projectFilePath": "C:\\Users\\smash\\OneDrive\\Рабочий стол\\Новая папка\\Delivery\\WebApplication7\\WebApplication7.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\smash\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\smash\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
