@@ -1,0 +1,22 @@
+﻿@model WebApplication8.ViewModels.CreateNewsViewModel
+    ViewBag.Title = "Добавление новости";
+}
+
+<form asp-action="addnews" asp-controller="account">
+    <div class="form-group">
+        <label asp-for="About" class="control-label"><b>Короткий заголовок</b></label>
+        <input type="text" asp-for="About" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Text" class="control-label"><b>Полная новость</b></label>
+        <input type="text" asp-for="Text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Image" class="control-label"><b>Картинка</b></label>
+    </div>
+    <center>
+        <div class="form-group">
+            <input type="submit" value="Отправить" class="btn btn-default" />
+        </div>
+    </center>
+</form>

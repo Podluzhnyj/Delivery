@@ -4,6 +4,8 @@ using WebApplication8.ViewModels;
 using WebApplication8.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApplication8.Controllers
 {
@@ -28,13 +30,37 @@ namespace WebApplication8.Controllers
         public async Task<IActionResult> Orders()
         {
             return View(await db.Orders.ToListAsync());
-        }
-
-        public IActionResult NewOrder()
+        }        
+        public IActionResult AccessDenied()
         {
             return View();
         }
-        public IActionResult AccessDenied()
+        public async Task<IActionResult> News()
+        {
+            return View(await db.News.ToListAsync());
+        }
+        [Authorize(Roles = "moderator")]
+        public IActionResult AddNews()
+        {
+            return View();
+        }
+        [Authorize(Roles = "moderator")]
+        [HttpPost]
+        public async Task<IActionResult> AddNews(CreateNewsViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                News news = new News { About = model.About, Text = model.Text, DateTime = DateTime.Now, Author = User.Identity.Name, Image = model.Image};
+                // добавляем пользователя
+
+                    db.News.Add(news);
+                    await db.SaveChangesAsync();
+                    return RedirectToAction("index", "home");
+                
+            }
+            return View(model);
+        }
+        public IActionResult NewOrder()
         {
             return View();
         }

@@ -1,0 +1,15 @@
+﻿@model IEnumerable<WebApplication8.Models.News>
+@{
+    ViewBag.Title = "Новости";
+}
+<div class="text-center">
+    <h1 class="display-4">Личный кабинет</h1>
+</div>
+<a asp-controller="account" asp-action="addnews">Добавить новость</a>
+<table class="table">
+    <tr><td>№</td><td>Коротко</td><td>Полная</td><td>Дата</td><td>Автор</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.Id</td><td>@item.About</td><td>@item.Text</td><td>@item.DateTime</td><td>@item.Author</td></tr>
+    }
+</table>

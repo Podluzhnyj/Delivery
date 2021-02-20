@@ -167,3 +167,6 @@ C:\Users\smash\source\repos\WebApplication8\WebApplication8\obj\Debug\net5.0\Raz
 C:\Users\smash\source\repos\WebApplication8\WebApplication8\bin\Debug\net5.0\web.config
 C:\Users\smash\source\repos\WebApplication8\WebApplication8\obj\Debug\net5.0\Razor\Views\Account\AccessDenied.cshtml.g.cs
 C:\Users\smash\source\repos\WebApplication8\WebApplication8\obj\Debug\net5.0\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\smash\source\repos\WebApplication8\WebApplication8\obj\Debug\net5.0\Razor\Views\Account\AddNews.cshtml.g.cs
+C:\Users\smash\source\repos\WebApplication8\WebApplication8\obj\Debug\net5.0\Razor\Views\Account\News.cshtml.g.cs
+C:\Users\smash\source\repos\WebApplication8\WebApplication8\obj\Debug\net5.0\Razor\Views\Shared\_LayoutNews.cshtml.g.cs

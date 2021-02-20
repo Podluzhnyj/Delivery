@@ -1,8 +1,9 @@
-﻿@{
+﻿@model IEnumerable<WebApplication8.Models.News>
+@{
     ViewData["Title"] = "Главная";
 }
-
 <div class="text-center">
     <h1 class="display-4">Доставка.бай</h1>
     <p>Актуальные доставки можно посмотреть на этой <a href="/account/orders">странице</a>.</p>
 </div>
+<partial name="_LayoutNews" />

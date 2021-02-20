@@ -6,6 +6,7 @@ namespace WebApplication8.Models
     public class ApplicationContext : IdentityDbContext<User>
     {
         public DbSet<Order> Orders { get; set; }
+        public DbSet<News> News { get; set; }
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)
         {
