@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace WebApplication8.Models
 {
@@ -12,7 +9,6 @@ namespace WebApplication8.Models
         public string Text { get; set; }
         public DateTime DateTime { get; set; }
         public string Author { get; set; }
-
         public string Image { get; set; }
 
     }

@@ -1,11 +1,11 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using WebApplication8.ViewModels;
-using WebApplication8.Models;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
-using Microsoft.AspNetCore.Authorization;
+using System.Threading.Tasks;
+using WebApplication8.Models;
+using WebApplication8.ViewModels;
 
 namespace WebApplication8.Controllers
 {
@@ -30,7 +30,7 @@ namespace WebApplication8.Controllers
         public async Task<IActionResult> Orders()
         {
             return View(await db.Orders.ToListAsync());
-        }        
+        }
         public IActionResult AccessDenied()
         {
             return View();
@@ -50,13 +50,13 @@ namespace WebApplication8.Controllers
         {
             if (ModelState.IsValid)
             {
-                News news = new News { About = model.About, Text = model.Text, DateTime = DateTime.Now, Author = User.Identity.Name, Image = model.Image};
-                // добавляем пользователя
+                News news = new News { About = model.About, Text = model.Text, DateTime = DateTime.Now, Author = User.Identity.Name, Image = model.Image };
+                // добавляем пользователя
 
-                    db.News.Add(news);
-                    await db.SaveChangesAsync();
-                    return RedirectToAction("index", "home");
-                
+                db.News.Add(news);
+                await db.SaveChangesAsync();
+                return RedirectToAction("index", "home");
+
             }
             return View(model);
         }
