@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+    <section id="first-section">
+        <div id="container">
+            <header>
+                <div class="header">
+                    <div class="header-block">
+                        <a asp-controller="home" asp-action="index"><img src="http://delivery.flatron.technology/images/logo-truck-big.png" alt="Logo"></a>
+                    </div>
+                    <div class="header-block">
+                        <nav>
+                            <ul id="ddmenu">
+                                <li><a asp-controller="account" asp-action="orders">Заказы</a></li>
+
+                                <li><a asp-controller="home" asp-action="pay">Оплата</a></li>
+                                <li><a asp-controller="home" asp-action="map">Пункты доставки</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header-block">
+                        <ul class="right-li">
+                            <partial name="_LoginPartial" />
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="Text-first-section">
+                <h1>Достигнем новых вершин вместe</h1>
+                <p>Кратчайший путь к наиболее эффективному построению маршрута</p>
+                <div class="btn-first-section"><a href="#" class="btn-primary">УЗНАТЬ БОЛЬШЕ</a></div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+</html>
